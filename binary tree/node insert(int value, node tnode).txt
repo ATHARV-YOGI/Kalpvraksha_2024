@@ -1,0 +1,17 @@
+node* insert(int value, node *tnode) {
+    if (tnode == NULL) {
+        node *newnode = malloc(sizeof(node));    
+        newnode->value = value;
+        newnode->left = NULL;
+        newnode->right = NULL;
+        return newnode;
+    } 
+    
+    if (value < tnode->value) {
+        tnode->left = insert(value, tnode->left);
+    } else {
+        tnode->right = insert(value, tnode->right);
+    }
+
+    return tnode;
+}
