@@ -2,23 +2,33 @@
 
 void show(int *arr, int n){
       for(int i=0;i<n;i++){
-        printf("%d",arr[i]);
+        printf("%d\t",arr[i]);
       }
 }
 
 void insertion_sort(int *arr, int n){
-    int temp;
-     for(int i=0;i<n;i++)   {
-        for(int j=i+1;j<i;j--){
-            if(j<i){
-                temp=arr[j];
-                arr[j]=arr[j-1];
+    int temp=0;
+     for(int i=0;i<n-2;i++)   {
+        if(arr[i+1]<arr[i]){
+            temp=arr[i+1];
+            arr[i+1]=arr[i];
+                
+            for(int j=i;j>0;j--){
+                
+                if(temp<arr[j-1]){
+                    
+                    arr[j]=arr[j-1];
+    
+                }
+                else 
+                {  
+                  arr[j]=temp;
+                  break;
+                }    
+            }
+        }
 
-            }
-              
-                
-                
-            }
+        
         }
       }
 
