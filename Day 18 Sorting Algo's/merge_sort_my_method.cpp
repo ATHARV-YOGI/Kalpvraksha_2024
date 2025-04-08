@@ -1,5 +1,4 @@
-#include<iostream>
-using namespace std;
+#include<stdio.h>
 
 void merging(int *arr,int start, int mid, int end){
     int temp[end-start+1];
@@ -44,7 +43,7 @@ void merge_sort(int *arr,int start,int end){
 
 void show(int *arr,int n){
     for(int i =0 ; i<n;i++){
-        cout<<arr[i]<<" ";
+        printf("%d",arr[i]);
     }
 }
 
