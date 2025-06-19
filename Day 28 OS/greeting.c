@@ -10,7 +10,7 @@ int main(int argc, char *argv[], char *envp[]) {
      if (envp != NULL) {
         for (int i = 0; envp[i] != NULL; i++) {
             if (strncmp(envp[i], target, strlen(target)) == 0) {
-                printf("ENV: %s\n", envp[i] );// Extracts the assigned value
+                printf("ENV: %s\n", envp[i] );
             }
         }
     }

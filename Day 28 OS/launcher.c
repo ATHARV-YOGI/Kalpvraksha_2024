@@ -20,7 +20,7 @@ int main(int argc, char *argv[]) {
 }
 
 void child_process(int argc, char *argv[]) {
-    execl("./greeting", "./greeting", "Shubham", "Deepak", NULL);
+    execl("./greeting", "./greeting", "atharv", "hi", NULL);
     printf("Failed to execute greeting program\n");
     perror("execl failed");
     exit(EXIT_FAILURE);
